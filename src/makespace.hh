@@ -76,7 +76,7 @@ RooWorkspace* GenerateSingleChannel( TString channelname/*, TString inputfile*/)
   NPmaker("bkgextrapMC", setup_bkgextrap_MC,*&nuispara , *&constraints , *&globobs, *&expected_bkg);
 
   // =========================== Declare POIs ================================                                                                                                                        
-  RooRealVar *mu = new RooRealVar("mu","mu",1,0,300);
+  RooRealVar *mu = new RooRealVar("mu","mu",1,-300,300);
   expected_sig->add(RooArgSet(*mu));
 
   // =========================== Signal expectation ===========================

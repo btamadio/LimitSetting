@@ -31,7 +31,7 @@ int main( int argc , char **argv)
 
 
 
-   for( int i = 20 ; i < 2001 ; i ++ )
+   for( int i = 20 ; i < 3001 ; i ++ )
     {
 
       double mu = 0.1*i ;
