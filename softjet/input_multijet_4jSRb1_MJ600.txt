@@ -1,0 +1,7 @@
+lumi 0.021
+JESNP1 0.1024
+bkgextrap 0.1311
+bkgextrapMC 0.127
+nsig 1.0
+nbkg 218.3
+Nobs 205
