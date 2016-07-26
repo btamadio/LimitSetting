@@ -100,7 +100,7 @@ RooWorkspace* GenerateSingleChannel( TString channelname/*, TString inputfile*/)
   w->import(expectation);
 
 
-  w->factory("Nobs[0,300]");
+  w->factory("Nobs[0,350]");
   w->defineSet("Observables","Nobs");
   w->var("Nobs")->setVal(input["Nobs"]);
   w->var("Nobs")->setConstant();

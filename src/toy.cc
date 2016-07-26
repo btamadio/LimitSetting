@@ -56,7 +56,7 @@ int main( int argc , char **argv)
       Nexp=result["Nexp"];
       DNLL = 2*(NLL0-NLL2) ;
       if( muhat > mu_of_hypothesis && mu_of_hypothesis >0) DNLL = 0;
-
+      if( muhat < mu_of_hypothesis && mu_of_hypothesis == 0) DNLL *= -1;
       fOutputTree.Fill() ;
      
     }

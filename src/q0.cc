@@ -8,13 +8,13 @@
  */
 
 #include "plotting.hh"
-
+//#include "AtlasStyle.h"
  
 
 int main (int argc, char **argv)
 {
-  gROOT->ProcessLine(".x rootlogon.C");
-  gROOT->SetStyle("ATLAS");
+  gROOT->LoadMacro("~/atlasstyle/AtlasStyle.C");
+  //SetAtlasStyle();
   gROOT->ForceStyle();
 
 
@@ -53,7 +53,7 @@ int main (int argc, char **argv)
 		 const int endpoint = 20 ;
 		 //		 double binwidth = endpoint*1.0/nbin;
 
-		 TH1F* h_B = new TH1F("h_B","h_B",nbin,0,endpoint);
+		 TH1F* h_B = new TH1F("h_B","h_B",2*nbin,-1*endpoint,endpoint);
 		 TH1F* h_SB = new TH1F("h_SB","h_SB",nbin,0,endpoint);
 
                  ifstream file_to_read("output.txt");
@@ -67,7 +67,7 @@ int main (int argc, char **argv)
                    }
 
                  double obs = obsQmu[0];
-
+		 cout<<"obs = "<<obs<<endl;
 
 		 for( int i = 0 ; i < numev ; i ++)
 		   {
